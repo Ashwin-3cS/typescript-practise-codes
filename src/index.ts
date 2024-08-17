@@ -190,3 +190,6 @@ let employee_variable: EmployeePerson = {
 };
 
 console.log(employee);
+
+
+// Optional Chaining,literal , nullable done in Notes
