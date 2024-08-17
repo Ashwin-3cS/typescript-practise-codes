@@ -82,14 +82,37 @@ enum Color {
   console.log(directionName); // Output: "Up"
   
   
-  //TYpe annotations 
+  //Type annotations 
 
   function moveInDirection(direction: Direction) {
-
+    if (direction == 3) { 
+        console.log("Turn left 3 inches");
+    }
 }
   
   moveInDirection(Direction.Left); // output : 3
 
+
+  //Function in TS
+
+//   function calculateTax (income: number, taxYear: number): number{ // we can also type annotate which type the function will return 
+//     if((taxYear || 2022) < 2022){
+//         return income * 1.2;
+//     }
+//     return income * 1.3;
+//   }
+
+// calculateTax(10_000, 2023); 
+
+
+function calculateTax (income: number, taxYear = 2022): number{  // if the taxYear is not passed in arguments then 2022 is the default value that will be taken 
+  if(taxYear < 2022){
+      return income * 1.2;
+  }
+  return income * 1.3;
+}
+
+calculateTax(10_000);
   
 
   
