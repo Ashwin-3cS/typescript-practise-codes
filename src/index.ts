@@ -148,4 +148,21 @@ let employee_var: Employee = {
   }
 };
 
+// Union type
+
+//Union type provides flexibility where we can use two or more types for a variable and also enusures type safety
+
+function kgToLbs (weight: number | string): number {
+  //Narrowing Method
+  // we use narrowing to use different logic for different types of argument thats being passed 
+  if(typeof weight === 'number'){
+    return weight * 2.2;
+  }else {
+    return parseInt(weight) * 2.2; // using parseInt to convert the string to integer
+    
+  }
+}
+
+kgToLbs(10);
+kgToLbs('10kg');
   
