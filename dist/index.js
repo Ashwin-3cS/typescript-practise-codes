@@ -1,2 +1,5 @@
 "use strict";
-let age = 10;
+let numbers = [];
+numbers.push(2);
+console.log(numbers);
+//# sourceMappingURL=index.js.map
