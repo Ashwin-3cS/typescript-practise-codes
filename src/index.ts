@@ -166,3 +166,27 @@ function kgToLbs (weight: number | string): number {
 kgToLbs(10);
 kgToLbs('10kg');
   
+
+//Intersection in TS
+
+// its used to combine multiple types to one 
+type Person = {
+  name: string;
+  age: number;
+};
+
+type Employee_type = {
+  employeeId: number;
+  department: string;
+};
+
+type EmployeePerson = Person & Employee_type;
+
+let employee_variable: EmployeePerson = {
+  name: "Alice",
+  age: 30,
+  employeeId: 1234,
+  department: "Engineering"
+};
+
+console.log(employee);
