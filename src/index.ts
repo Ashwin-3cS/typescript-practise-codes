@@ -32,3 +32,64 @@ let user: [number,string] = [10,'Ash'];
 // user[2] = 'string'; // it will lead to an error because we try to add string in the user tuple which is defined for only two elements
 console.log('user',user)
 
+
+
+//enum in TS
+
+
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right
+  }
+  
+  let move: Direction = Direction.Up;
+  console.log(move); // Output: 0
+
+
+//   Customizing Enum Values
+
+enum StatusCode {
+    Success = 200,
+    NotFound = 404,
+    ServerError = 500
+  }
+  
+  let code: StatusCode = StatusCode.NotFound;
+  console.log(code); // Output: 404
+
+  
+//   String Enums
+
+enum Color {
+    Red = "RED",
+    Green = "GREEN",
+    Blue = "BLUE"
+  }
+  
+  let color: Color = Color.Green;
+  console.log(color); // Output: "GREEN"
+
+
+
+
+
+//   Reverse Mapping
+
+  
+  let directionName: string = Direction[0];
+  console.log(directionName); // Output: "Up"
+  
+  
+  //TYpe annotations 
+
+  function moveInDirection(direction: Direction) {
+
+}
+  
+  moveInDirection(Direction.Left); // output : 3
+
+  
+
+  
